@@ -1,0 +1,127 @@
+body {
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  height: 85px;
+  text-align: center;
+  background-color: #404041;
+}
+
+main {
+  padding-bottom: 20px;
+}
+
+.title {
+  margin: auto;
+  line-height: 85px;
+}
+
+h1 {
+  color: #E6E7E8;
+  font-size: 3em;
+  font-weight: 300;
+}
+
+span.title-number {
+  color: #ED458B;
+  font-weight: 700;
+}
+
+.guessInput {
+  box-sizing: border-box;
+  display: block;
+  width: 375px;
+  height: 30px;
+  margin: 20px auto;
+}
+
+input.guessInput:placeholder-shown,
+.guessInput {
+  text-align: left;
+  color: #929497;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1em;
+}
+
+.interactionButtons {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.errorMessages {
+  color: red;
+  font-weight: 700;
+  margin: 10px auto;
+}
+
+.guessMessageTop,
+.guessMessageBottom {
+  font-size: 30px;
+}
+
+.guessMessageTop {
+  margin: 30px auto 0;
+}
+
+.guessMessageBottom {
+  margin: 0 auto 30px;
+}
+
+.guessValue {
+  margin: 0;
+  padding: 0 0;
+  color: #ED458B;
+  font-size: 100px;
+}
+
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 30px;
+  text-decoration: none;
+  color: #FFF;
+  background-color: #929497;
+  border: 0px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 1.1em;
+}
+
+.button:hover {
+  background-color: #EB008B;
+  cursor: pointer;
+}
+
+.button:disabled {
+  background-color: #D0D2D3;
+}
+
+.guessButton,
+.clearButton {
+  width: 177px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.resetButton {
+  width: 375px;
+  margin: auto;
+}
+
+.guessDisplay {
+  min-height: 250px;
+}
+
+.debugDisplay {
+  width: 300px;
+  height: 300px;
+}
+
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: " ";
+}
