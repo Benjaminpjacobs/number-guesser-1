@@ -11,6 +11,7 @@ header {
 
 main {
   padding-bottom: 20px;
+  text-align: center;
 }
 
 .title {
@@ -29,20 +30,52 @@ span.title-number {
   font-weight: 700;
 }
 
-.guessInput {
+.instructionText {
+  width: 500px;
+  margin: 10px auto;
+}
+
+#guessInput {
   box-sizing: border-box;
   display: block;
   width: 375px;
   height: 30px;
-  margin: 20px auto;
+  margin: 5px auto;
 }
 
-input.guessInput:placeholder-shown,
-.guessInput {
+#minRangeValue,
+#maxRangeValue {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  margin: 5px 15px;
+  outline: none;
+}
+
+#minRangeValue:disabled,
+#maxRangeValue:disabled {
+  background-color: #D0D2D3;
+  cursor: not-allowed;
+}
+
+.boom {
+  background-image: url('images/boom-graphic.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+input.userInput:placeholder-shown,
+.userInput {
   text-align: left;
   color: #929497;
   font-family: 'Open Sans', sans-serif;
   font-size: 1.1em;
+  outline: none;
 }
 
 .interactionButtons {
@@ -54,27 +87,35 @@ input.guessInput:placeholder-shown,
 .errorMessages {
   color: red;
   font-weight: 700;
-  margin: 10px auto;
+  margin: 0 auto;
+  height: 25px;
+  line-height: 25px;
 }
 
 .guessMessageTop,
 .guessMessageBottom {
+  box-sizing: border-box;
   font-size: 30px;
+  height: 40px;
 }
 
 .guessMessageTop {
-  margin: 30px auto 0;
+  margin: 20px auto 0;
 }
 
 .guessMessageBottom {
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
 }
 
 .guessValue {
-  margin: 0;
-  padding: 0 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 5px 0;
   color: #ED458B;
-  font-size: 100px;
+  font-size: 110px;
+  width: 300px;
+  height: 200px;
+  line-height: 200px;
 }
 
 .button {
@@ -88,6 +129,7 @@ input.guessInput:placeholder-shown,
   border-radius: 30px;
   font-family: inherit;
   font-size: 1.1em;
+  outline: none;
 }
 
 .button:hover {
@@ -97,6 +139,7 @@ input.guessInput:placeholder-shown,
 
 .button:disabled {
   background-color: #D0D2D3;
+  cursor: not-allowed;
 }
 
 .guessButton,
@@ -113,11 +156,6 @@ input.guessInput:placeholder-shown,
 
 .guessDisplay {
   min-height: 250px;
-}
-
-.debugDisplay {
-  width: 300px;
-  height: 300px;
 }
 
 .clearfix:after {

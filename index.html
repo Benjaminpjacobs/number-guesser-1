@@ -14,19 +14,21 @@
     <h1 class="title"><span class="title-number">Number</span> Guesser</h1>
   </header>
   <main class="clearfix">
-    <input id="guessInput" class="guessInput" type="text" name="" value="" placeholder="Enter your guess">
-
+    <p class="instructionText">Welcome to Number Guesser. Enter the minimum and maximum range for the generated random number, then enter your best guess!</p>
+    <label>Min: <input id="minRangeValue" class="userInput" type="text" name="" value="1"></label>
+    <label>Max: <input id="maxRangeValue" class="userInput" type="text" name="" value="100">
+    <input id="guessInput" class="userInput" type="text" name="" value="" placeholder="Enter your guess">
+    <p id="errorMessages" class="errorMessages"></p>
     <span class="interactionButtons">
-      <button id="guessButton" class="guessButton button buttonEnabled" type="button" name="button">Guess</button>
-      <button id="clearButton" class="clearButton button buttonDisabled" type="button" name="button">Clear</button>
+      <button id="guessButton" class="guessButton button" type="button" name="button">Guess</button>
+      <button id="clearButton" class="clearButton button" type="button" name="button">Clear</button>
 
-    <div id="guessDisplay" class="guessDisplay">
-      <p id="errorMessages" class="errorMessages"></p>
-      <p id="guessMessageTop" class="guessMessageTop"></p>
-      <p id="guessValue" class="guessValue"></p>
-      <p id="guessMessageBottom" class="guessMessageBottom"></p>
-    </div>
-    <button id="resetButton" class="resetButton button buttonDisabled" type="button" name="button">Reset</button></span>
+      <div id="guessDisplay" class="guessDisplay">
+        <p id="guessMessageTop" class="guessMessageTop"></p>
+        <div id="guessValue" class="guessValue"></div>
+        <p id="guessMessageBottom" class="guessMessageBottom"></p>
+      </div>
+      <button id="resetButton" class="resetButton button" type="button" name="button">Reset</button></span>
   </main>
 </body>
 <script type="text/javascript" src="javascript.js"></script>
