@@ -11,6 +11,7 @@ var minRangeValue = document.getElementById('minRangeValue');
 var maxRangeValue = document.getElementById('maxRangeValue');
 var randomNumber = null;
 var usersLastGuess = null;
+var debug = false;
 
 // Event listener on the CLEAR button. We need to clear the input element and disable the appropriate buttons.
 clearButton.addEventListener('click', function () {
@@ -20,7 +21,9 @@ clearButton.addEventListener('click', function () {
 
 // Event listener on the RESET button. We need to clear the input element and reset back to zero state.
 resetButton.addEventListener('click', function () {
-	console.log('=+=+=+=+=+=+ NEW GAME =+=+=+=+=+=+');
+	if (debug) {
+		console.log('=+=+=+=+=+=+ NEW GAME =+=+=+=+=+=+');
+	}
 	clearInput();
 	setZeroState();
 });
@@ -59,7 +62,9 @@ guessButton.addEventListener('click', function () {
 		clearInput();
 	} else {
 		errorMessages.innerText = '';
-		console.log('Random number is currently ' + randomNumber);
+		if (debug) {
+			console.log('Random number is currently ' + randomNumber);
+		}
 		if (randomNumber == null) {
 			getRandomNumber();
 		}
@@ -116,9 +121,11 @@ function getRandomNumber() {
 	min = Math.ceil(min);
 	max = Math.floor(max);
 	randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-	console.log('New random number generation.' +
-		'\nMin: ' + min + ', Max: ' + max +
-		'\nRandom Number is now: ' + randomNumber);
+	if (debug) {
+		console.log('New random number generation.' +
+			'\nMin: ' + min + ', Max: ' + max +
+			'\nRandom Number is now: ' + randomNumber);
+	}
 }
 
 // Function to clear the guess input field and set focus to the input element
@@ -134,10 +141,12 @@ function clearInput() {
 
 // Function to evaluate the users guess compared to the current random number
 function evaluateGuess() {
-	console.log('Min: ' + minRangeValue.value + '\n' +
-		'Max: ' + maxRangeValue.value + '\n' +
-		'Random number: ' + randomNumber + '\n' +
-		'User guess: ' + usersLastGuess);
+	if (debug) {
+		console.log('Min: ' + minRangeValue.value + '\n' +
+			'Max: ' + maxRangeValue.value + '\n' +
+			'Random number: ' + randomNumber + '\n' +
+			'User guess: ' + usersLastGuess);
+	}
 	// Disable the min and max ranges (only to be re-enabled on reset)
 	disableElement(minRangeValue);
 	disableElement(maxRangeValue);
